@@ -1,7 +1,10 @@
 module "asg" {
-  source = "git::https://github.com/nikkaushal/terraform-asg.git"
+  source          = "git::https://github.com/nikkaushal/terraform-asg.git"
+  COMPONENT       = var.COMPONENT
+  ENV             = var.ENV
+  INSTANCE_TYPE   = var.INSTANCE_TYPE
 }
 
 output "sample" {
-  value = module.asg.sample
+  value           = module.asg.sample
 }
